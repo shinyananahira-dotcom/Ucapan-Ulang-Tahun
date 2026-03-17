@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8e8c7" />
+    <meta
+      name="description"
+      content="Website ucapan ulang tahun untuk Mio (16) dengan tampilan chat."
+    />
+    <title>Ucapan Ulang Tahun</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <main class="page">
+      <section class="hero" aria-label="Judul">
+        <div class="hero__decor hero__decor--spark" aria-hidden="true"></div>
+        <div class="hero__decor hero__decor--leaf hero__decor--leafL" aria-hidden="true"></div>
+        <div class="hero__decor hero__decor--leaf hero__decor--leafR" aria-hidden="true"></div>
+
+        <h1 class="hero__title">
+          ULANG TAHUN YANG KE-16<br />
+          MIO
+        </h1>
+        <p class="hero__sub">
+          Versi chat lucu buat dikirim ke Mio.
+        </p>
+      </section>
+
+      <section class="stage" aria-label="Tampilan ponsel">
+        <div class="phone" role="application" aria-label="Chat ulang tahun">
+          <div class="phone__notch" aria-hidden="true"></div>
+
+          <header class="phone__top">
+            <button class="iconBtn" id="btnBack" type="button" aria-label="Kembali">
+              ‹
+            </button>
+            <div class="topInfo">
+              <div class="avatar" aria-hidden="true"></div>
+              <div class="topInfo__text">
+                <div class="topInfo__name" id="chatName">Hai Kamu</div>
+                <div class="topInfo__status" id="chatStatus">online</div>
+              </div>
+            </div>
+            <button class="iconBtn" id="btnConfetti" type="button" aria-label="Confetti">
+              ✦
+            </button>
+          </header>
+
+          <div class="phone__body">
+            <div class="photoBar" aria-label="Foto">
+              <div class="photoBar__inner">
+                <img
+                  id="photo"
+                  class="photo"
+                  alt="Foto untuk Mio"
+                  src="./assets/foto-mio.png"
+                  loading="lazy"
+                />
+                <div class="photoBar__actions">
+                  <input
+                    id="inputPhoto"
+                    type="file"
+                    accept="image/*"
+                    class="photoInput"
+                  />
+                  <button class="miniBtn" id="btnPhoto" type="button">
+                    Pilih Foto
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="chat" id="chat" aria-live="polite" aria-relevant="additions"></div>
+          </div>
+
+          <footer class="phone__bottom">
+            <div class="quick" id="quick" aria-label="Pilihan jawaban"></div>
+            <div class="composer">
+              <input
+                class="composer__input"
+                id="inputFrom"
+                type="text"
+                placeholder="Tulis nama pengirim… (opsional)"
+                maxlength="40"
+              />
+              <button class="sendBtn" id="btnCopy" type="button">Salin</button>
+            </div>
+          </footer>
+        </div>
+
+        <canvas id="confetti" class="confetti" aria-hidden="true"></canvas>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
